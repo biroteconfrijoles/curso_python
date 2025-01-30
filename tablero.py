@@ -52,7 +52,7 @@ def juego(simbolos:dict):
         ['3','5','7'],
     ]
 
-def checa_winner(sinbolos_dict):
+def checa_winner(simbolos_dict, combinaciones:list):
     '''checa si hay un ganador'''
     for c in combinaciones:
         if simbolos[c[0]] == simbolos[c[1]] == simbolos[c[2]]:
