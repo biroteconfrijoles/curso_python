@@ -20,6 +20,19 @@ def ia(simbolos:dict):
             simbolos[x]= 'O'
             ocupado = False
 
+def usuario(simbolos:dict):
+    '''estrategia del usario'''
+
+    ocupado = True 
+    lista_numeros = [str(i) for i in range(1,10)] #del 1 al 9
+    while ocupado is True:
+        x = input("elija un numero del 1 al 9")
+        if simbolos[x] not in ['X','O']:
+            simbolos[x] = 'X'
+            ocupado = False
+        else:
+            print('esa casilla ya esta ocupada')
+
 
 
     numeros = [str(i) for i in range(1,10)]
@@ -32,8 +45,10 @@ if __name__=='__main__':
    dibuja_tablero(dsimbolos)
    ia(dsimbolos)
    dibuja_tablero(dsimbolos)
+   usuario(dsimbolos)
+   dibuja_tablero(dsimbolos)
 
-   
+   ''' 
    x = random.choice(numeros)
    dsimbolos[x]='x'
    dibuja_tablero(dsimbolos)
@@ -42,4 +57,4 @@ if __name__=='__main__':
    dsimbolos[o] = 'o'
    dibuja_tablero(dsimbolos)
    print(numeros)
-   
+   '''  
